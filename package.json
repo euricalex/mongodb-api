@@ -1,0 +1,27 @@
+{
+  "name": "mongodb-medicine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/euricalex/mongodb-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/euricalex/mongodb-api/issues"
+  },
+  "homepage": "https://github.com/euricalex/mongodb-api#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "mongodb": "^6.4.0",
+    "nodemon": "^3.1.0"
+  }
+}
