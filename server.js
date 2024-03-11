@@ -7,12 +7,21 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const URL = process.env.URL;
 
+
 const DB_NAME = process.env.DB_NAME; // Имя базы данных
 const COLLECTION_NAME = process.env.COLLECTION_NAME; // Имя коллекции
 
 // Подключение к базе данных
 let db;
 app.use(cors());
+
+
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://euricalex.github.io');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
 
 MongoClient.connect(URL)
   .then((client) => {
